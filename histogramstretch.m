@@ -13,7 +13,7 @@ function res = histogramstretch(im, max_value = 255)
 				end
 			end
 		end
-		tmp = ((im(:,:,layer) - minv).*(max_value/maxv));
+		tmp = ((im(:,:,layer) - minv).*(max_value/(maxv-minv)));
 		if size(res, 1) == 0
 			res = tmp;
 		else
