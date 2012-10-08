@@ -1,4 +1,7 @@
-function res = histogramstretch(im, max_value = 255)
+function res = histogramstretch(im, max_value)
+    if nargin<2
+        max_value = 255;
+    end
 	[n, m, t] = size(im);
 	res = [];
 	for layer = [1:t]
